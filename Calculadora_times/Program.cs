@@ -52,9 +52,29 @@ namespace Calculadora_times
                     break;
             }
 
+            string simboloOperacao = "";
 
+            switch (operacao)
+            {
+                case 1:
+                    simboloOperacao = "+";
+                    break;
 
-            Console.WriteLine($"O resultado é: {resultado}");
+                case 2:
+                    simboloOperacao = "-";
+                    break;
+
+                case 3:
+                    simboloOperacao = "*";
+                    break;
+
+                case 4:
+                    simboloOperacao = "/";
+                    break;
+            }
+
+            Console.WriteLine($"O resultado é: {n1} {simboloOperacao} {n2} = {resultado}");
+            Console.ReadLine();
         }
     }
 }

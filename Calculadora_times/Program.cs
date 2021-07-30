@@ -12,6 +12,7 @@ namespace Calculadora_times
         {
             while (true)
             {
+                Console.Clear();
                 Console.WriteLine("Digite o que deseja fazer:\n" +
                     "1. Somar\n" +
                     "2. Subtrair\n" +
@@ -23,16 +24,32 @@ namespace Calculadora_times
                 if (operacao != 1 && operacao != 2 && operacao != 3 && operacao != 4 && operacao != 5 && operacao != 6)
                 {
                     Console.WriteLine("Operação inválida, tente novamente");
-                    Console.ReadKey();
-                    Console.Clear();
+                    Console.ReadKey();                    
                     continue;
                 }
 
-                Console.WriteLine("Digite o primerio valor: ");
-                int n1 = Convert.ToInt32(Console.ReadLine());
+                double n1, n2;
 
-                Console.WriteLine("Digite o segundo valor: ");
-                int n2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Digite o primerio valor: ");
+                n1 = Convert.ToInt32(Console.ReadLine());
+
+                do
+                {
+                    Console.WriteLine("Digite o segundo valor: ");
+                    n2 = Convert.ToDouble(Console.ReadLine());
+
+                    if (operacao == 4 && n2 == 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+
+                        Console.WriteLine("Segundo número inválido! Tente novamente");
+
+                        Console.ResetColor();
+
+                        Console.ReadLine();
+                    }
+
+                } while (operacao == 4 && n2 == 0);
 
 
                 double resultado = 0;

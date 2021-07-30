@@ -22,12 +22,24 @@ namespace Calculadora_times
                     "5. Visualizar historico\n" +
                     "6. Encerrar o programa");
 
-                int operacao = Convert.ToInt32(Console.ReadLine());
+
+                int operacao;
+
+                try
+                {
+                    operacao = Convert.ToInt32(Console.ReadLine());
+                } 
+                catch (Exception)
+                {
+                    Console.WriteLine("Digite um numero!");
+                    Console.ReadLine();
+                    continue;
+                }
 
                 if (operacao != 1 && operacao != 2 && operacao != 3 && operacao != 4 && operacao != 5 && operacao != 6)
                 {
                     Console.WriteLine("Operação inválida, tente novamente");
-                    Console.ReadKey();                    
+                    Console.ReadLine();                    
                     continue;
                 }
 
@@ -39,7 +51,7 @@ namespace Calculadora_times
                     }
 
                     Console.Write("Digite qualquer coisa para continuar: ");
-                    Console.ReadKey();
+                    Console.ReadLine();
                     continue;
                 }
 

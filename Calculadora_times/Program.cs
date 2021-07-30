@@ -28,7 +28,9 @@ namespace Calculadora_times
 
             switch (operacao)
             {
-                //operacoes
+                case 1:
+                    resultado = n1 + n2;
+                    break;
             }
 
             Console.WriteLine($"O resultado é: {resultado}");

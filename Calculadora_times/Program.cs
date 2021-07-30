@@ -10,6 +10,7 @@ namespace Calculadora_times
     {
         static void Main(string[] args)
         {
+            
             Console.WriteLine("Digite o que deseja fazer:\n" +
                 "1. Somar\n" +
                 "2. Subtrair\n" +
@@ -18,11 +19,17 @@ namespace Calculadora_times
 
             int operacao = Convert.ToInt32(Console.ReadLine());
 
+            if (operacao != 1 && operacao != 2 && operacao != 3 && operacao != 4 && operacao != 5 && operacao != 6)
+            {
+                Console.WriteLine("Operação inválida, tente novamente");                
+            }
+
             Console.WriteLine("Digite o primerio valor: ");
             int n1 = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Digite o segundo valor: ");
             int n2 = Convert.ToInt32(Console.ReadLine());
+            
 
             double resultado = 0;
 
@@ -39,7 +46,13 @@ namespace Calculadora_times
                 case 3:
                     resultado = n1 * n2;
                     break;
+
+                case 4:
+                    resultado = n1 / n2;
+                    break;
             }
+
+
 
             Console.WriteLine($"O resultado é: {resultado}");
         }

@@ -37,6 +37,8 @@ namespace Calculadora_times
                         Console.WriteLine(conta);
                     }
 
+                    Console.Write("Digite qualquer coisa para continuar: ");
+                    Console.ReadKey();
                     continue;
                 }
 

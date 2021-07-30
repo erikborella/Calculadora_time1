@@ -28,7 +28,7 @@ namespace Calculadora_times
                     continue;
                 }
 
-                Console.WriteLine("Digite o primerio valor: ");
+                Console.WriteLine("Digite o primeiro valor: ");
                 int n1 = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("Digite o segundo valor: ");

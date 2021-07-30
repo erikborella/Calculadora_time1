@@ -31,6 +31,10 @@ namespace Calculadora_times
                 case 1:
                     resultado = n1 + n2;
                     break;
+
+                case 2:
+                    resultado = n1 - n2;
+                    break;
             }
 
             Console.WriteLine($"O resultado é: {resultado}");

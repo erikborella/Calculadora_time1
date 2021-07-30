@@ -14,7 +14,7 @@ namespace Calculadora_times
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine(
+                Console.Write(
                     "1. Somar\n" +
                     "2. Subtrair\n" +
                     "3. Multiplicar\n" +
@@ -62,12 +62,12 @@ namespace Calculadora_times
 
                 double n1, n2;
 
-                Console.WriteLine("Digite o primeiro valor: ");
+                Console.Write("Digite o primeiro valor: ");
                 n1 = Convert.ToInt32(Console.ReadLine());
 
                 do
                 {
-                    Console.WriteLine("Digite o segundo valor: ");
+                    Console.Write("Digite o segundo valor: ");
                     n2 = Convert.ToDouble(Console.ReadLine());
 
                     if (operacao == 4 && n2 == 0)

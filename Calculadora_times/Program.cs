@@ -13,14 +13,14 @@ namespace Calculadora_times
             while (true)
             {
 
-            List<string> historicoConta = new List<string>();
+                List<string> historicoConta = new List<string>();
 
-            Console.WriteLine("Digite o que deseja fazer:\n" +
-                "1. Somar\n" +
-                "2. Subtrair\n" +
-                "3. Multiplicar\n" +
-                "4. Divisao\n" +
-                "5. Visualizar historico");
+                Console.WriteLine("Digite o que deseja fazer:\n" +
+                    "1. Somar\n" +
+                    "2. Subtrair\n" +
+                    "3. Multiplicar\n" +
+                    "4. Divisao\n" +
+                    "5. Visualizar historico");
 
                 int operacao = Convert.ToInt32(Console.ReadLine());
 
@@ -63,14 +63,10 @@ namespace Calculadora_times
                         foreach (string conta in historicoConta)
                         {
                             Console.WriteLine(conta);
-                            // voltar ao menu incial
+                            continue;
                         }
                         break;
                 }
-                
-
-                
-            }
 
                 string simboloOperacao = "";
 
@@ -93,12 +89,13 @@ namespace Calculadora_times
                         break;
                 }
 
-            string resultadoOperacao = $"{n1} {simboloOperacao} {n2} = {resultado}";
+                string resultadoOperacao = $"{n1} {simboloOperacao} {n2} = {resultado}";
 
-            historicoConta.Add(resultadoOperacao);
+                historicoConta.Add(resultadoOperacao);
 
-            Console.WriteLine($"O resultado é: {resultadoOperacao}");
-            Console.ReadLine();
+                Console.WriteLine($"O resultado é: {resultadoOperacao}");
+                Console.ReadLine();
+            }
         }
     }
 }

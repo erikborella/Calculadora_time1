@@ -32,8 +32,8 @@ namespace Calculadora_times
                     resultado = n1 + n2;
                     break;
 
-                case 2:
-                    resultado = n1 - n2;
+                case 3:
+                    resultado = n1 * n2;
                     break;
             }
 

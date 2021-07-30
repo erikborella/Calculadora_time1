@@ -63,6 +63,7 @@ namespace Calculadora_times
             }
 
             Console.WriteLine($"O resultado é: {n1} {simboloOperacao} {n2} = {resultado}");
+            Console.ReadLine();
         }
     }
 }

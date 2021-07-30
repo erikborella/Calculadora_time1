@@ -10,11 +10,9 @@ namespace Calculadora_times
     {
         static void Main(string[] args)
         {
+            List<string> historicoConta = new List<string>();
             while (true)
             {
-
-                List<string> historicoConta = new List<string>();
-
                 Console.WriteLine("Digite o que deseja fazer:\n" +
                     "1. Somar\n" +
                     "2. Subtrair\n" +
@@ -29,6 +27,16 @@ namespace Calculadora_times
                     Console.WriteLine("Operação inválida, tente novamente");
                     Console.ReadKey();
                     Console.Clear();
+                    continue;
+                }
+
+                if (operacao == 5)
+                {
+                    foreach (string conta in historicoConta)
+                    {
+                        Console.WriteLine(conta);
+                    }
+
                     continue;
                 }
 
@@ -58,14 +66,7 @@ namespace Calculadora_times
                     case 4:
                         resultado = n1 / n2;
                         break;
-
-                    case 5:
-                        foreach (string conta in historicoConta)
-                        {
-                            Console.WriteLine(conta);
-                            continue;
-                        }
-                        break;
+                        
                 }
 
                 string simboloOperacao = "";

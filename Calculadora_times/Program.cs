@@ -31,14 +31,14 @@ namespace Calculadora_times
                 catch (Exception)
                 {
                     Console.WriteLine("Digite um numero!");
-                    Console.ReadKey();
+                    Console.ReadLine();
                     continue;
                 }
 
                 if (operacao != 1 && operacao != 2 && operacao != 3 && operacao != 4 && operacao != 5 && operacao != 6)
                 {
                     Console.WriteLine("Operação inválida, tente novamente");
-                    Console.ReadKey();                    
+                    Console.ReadLine();                    
                     continue;
                 }
 
@@ -50,7 +50,7 @@ namespace Calculadora_times
                     }
 
                     Console.Write("Digite qualquer coisa para continuar: ");
-                    Console.ReadKey();
+                    Console.ReadLine();
                     continue;
                 }
 

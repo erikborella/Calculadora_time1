@@ -14,14 +14,14 @@ namespace Calculadora_times
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("Digite o que deseja fazer:\n" +
+                Console.WriteLine(
                     "1. Somar\n" +
                     "2. Subtrair\n" +
                     "3. Multiplicar\n" +
                     "4. Divisao\n" +
                     "5. Visualizar historico\n" +
-                    "6. Encerrar o programa");
-
+                    "6. Encerrar o programa\n\n" +
+                    "Digite o que deseja fazer: ");
 
                 int operacao;
 

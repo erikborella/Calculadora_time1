@@ -21,7 +21,19 @@ namespace Calculadora_times
                     "4. Divisao\n" +
                     "5. Visualizar historico");
 
-                int operacao = Convert.ToInt32(Console.ReadLine());
+
+                int operacao;
+
+                try
+                {
+                    operacao = Convert.ToInt32(Console.ReadLine());
+                } 
+                catch (Exception)
+                {
+                    Console.WriteLine("Digite um numero!");
+                    Console.ReadKey();
+                    continue;
+                }
 
                 if (operacao != 1 && operacao != 2 && operacao != 3 && operacao != 4 && operacao != 5 && operacao != 6)
                 {

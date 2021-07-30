@@ -19,7 +19,8 @@ namespace Calculadora_times
                     "2. Subtrair\n" +
                     "3. Multiplicar\n" +
                     "4. Divisao\n" +
-                    "5. Visualizar historico");
+                    "5. Visualizar historico\n" +
+                    "6. Encerrar o programa");
 
                 int operacao = Convert.ToInt32(Console.ReadLine());
 
@@ -42,9 +43,14 @@ namespace Calculadora_times
                     continue;
                 }
 
+                if (operacao == 6)
+                {
+                    break;
+                }
+
                 double n1, n2;
 
-                Console.WriteLine("Digite o primerio valor: ");
+                Console.WriteLine("Digite o primeiro valor: ");
                 n1 = Convert.ToInt32(Console.ReadLine());
 
                 do
